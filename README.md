@@ -12,7 +12,7 @@
   <img src="https://github.com/ParkSeongHaa/Phone/assets/136056187/67391d90-ff1a-465d-bf9f-2cff699a6a15" width="30%" />
 </p>
 
-#### 로그인
+<!--#### 로그인
 * ID 검증
 * 암호화된 PW 비교
 * 로그인 시 쿠키, 세션 생성
