@@ -12,34 +12,29 @@
   <img src="https://github.com/ParkSeongHaa/Phone/assets/136056187/67391d90-ff1a-465d-bf9f-2cff699a6a15" width="30%" />
 </p>
 
-<!--#### 로그인
-* ID 검증
-* 암호화된 PW 비교
-* 로그인 시 쿠키, 세션 생성
-* ID 찾기, PW 찾기, 회원가입 링크 연결
+#### 날짜 및 시간
+* Date()
+* setInterval()
+* 인터벌을 사용해 Date()를 갱신시켜 날짜와 시간을 계속 갱신함
 <p align="left">
-  <img src="https://user-images.githubusercontent.com/108784431/208563809-ad4bc05d-d48a-46e7-b863-415a1014073f.jpg" width="30%"/>
-  <img src="https://user-images.githubusercontent.com/108784431/208563823-859e9b0f-5c7c-4a8e-8ac3-cb237a9382f1.jpg" width="30%"/>
-  <img src="https://user-images.githubusercontent.com/108784431/208563828-d0bfad4b-2463-4928-93d8-b82dfcc73b06.jpg" width="30%"/>
+  <img src="https://github.com/ParkSeongHaa/Phone/assets/136056187/db906b08-e4b4-4b1a-b7fe-b5ece080dda0" width="30%"/>
+  <img src="https://github.com/ParkSeongHaa/Phone/assets/136056187/3ea96d12-e246-4750-82ff-26875d44f8ae" width="30%"/>
 </p>
 
-#### 마이페이지
-* 로그인 상태 체크
-* 사용자 기본 정보 확인
-* PW 변경
-* 등록한 차량, 게시글, 댓글 확인
-* 구매목록 확인 (구현중)
+#### 전화 app
+* 키보드로 숫자입력가능
+* 숫자입력시 숫자버튼 hover
+* 통화 클릭시 화면전환
+* 통화옵션버튼 클릭시 hover
+* 키패드 클릭시 키패드띄우기(구현예정)
+* 입력된 숫자 한번에 지우는 버튼(구현예정)
 <p>
-  <img src="https://user-images.githubusercontent.com/108784431/208564015-6db96286-6758-4e8f-b63e-ea861cbb4032.jpg" width="30%"/>
-  <img src="https://user-images.githubusercontent.com/108784431/208564038-241d4b7d-3009-40cf-bacf-8317fb1bf87f.jpg" width="30%"/>
-  <img src="https://user-images.githubusercontent.com/108784431/208564071-dd20defe-b3b0-4852-a8b5-722d1b789e28.jpg" width="30%"/>
-  <img src="https://user-images.githubusercontent.com/108784431/208564074-c28bc13e-20fc-411e-9610-58b0229128aa.jpg" width="30%"/>
-  <img src="https://user-images.githubusercontent.com/108784431/208564085-c0e9d32b-89f2-42c5-a912-94ac1fb5ee16.jpg" width="30%"/>
-  <img src="https://user-images.githubusercontent.com/108784431/208564098-16b00726-3142-4bba-afb2-a4fbe31ccb49.jpg" width="30%"/>
-  <img src="https://user-images.githubusercontent.com/108784431/208564107-adc5837b-6b2a-4062-8b33-9300a2f9741e.jpg" width="30%"/>
+  <img width="421" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/ff5f1464-c357-41d5-97ad-abf4943c62da">
+<img width="449" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/bdaf809f-f214-47fa-951f-6649d9e0947c">
+
 </p>
 
-#### 로그아웃
+<!--#### 로그아웃
 * 쿠키, 세션 삭제
 
 #### 홈 화면
