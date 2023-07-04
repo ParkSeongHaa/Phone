@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./script/script.js" defer></script>
+    <title>My Phone</title>
+    
+</head>
+<body>
+    <div id="phone">
+        <div id="top">
+            <div id="lens1"></div>
+            <div id="lens2"></div>
+        </div>
+        <div id="screen">
+            <div id="menuBar">
+                <div id="date"></div>
+                <div id="time"></div>
+                <img src="./img/menuBtn.png" id="topMenu">
+                <div id="menuList">
+                    <div id="tohome" class="menu">
+                        home
+                    </div>
+                    <div id="toCall" class="menu">
+                        Call
+                    </div>
+                    <div id="toToDoList" class="menu">
+                        To Do List
+                    </div>
+                    <div id="toQuiz" class="menu">
+                        Quiz
+                    </div>
+                    <div id="toCalc" class="menu">
+                        Calculator
+                    </div>
+                </div>
+            </div>
+<!-- --------------------------------홈화면--------------------------------->
+            <div id="home_screen" class="main_screen_list">
+                <img src="./img/logo.png" id="logo">
+                <div id="bottom_menu">
+                    <div id="call" class="main_menu">
+                        <img src="./img/call.png">
+                    </div>
+                    <div id="toDoList" class="main_menu">
+                        <img src="./img/toDoList.png">
+                    </div>
+                    <div id="quiz" class="main_menu">
+                        <img src="./img/quiz.png">
+                    </div>
+                    <div id="calculator" class="main_menu">
+                        <img src="./img/calculator.png">
+                    </div>
+                </div>
+                <div id="bottom_menu_backgroundColor">
+                </div>
+            </div>
+<!-- --------------------------------전화화면--------------------------------->
+            <div id="call_screen" class="main_screen_list">
+                <div id="display_number"></div>
+                <div id="keypad_box">
+                    <div id="1" class="callKeyPads">1</div>
+                    <div id="2" class="callKeyPads">2</div>
+                    <div id="3" class="callKeyPads">3</div>
+                    <div id="4" class="callKeyPads">4</div>
+                    <div id="5" class="callKeyPads">5</div>
+                    <div id="6" class="callKeyPads">6</div>
+                    <div id="7" class="callKeyPads">7</div>
+                    <div id="8" class="callKeyPads">8</div>
+                    <div id="9" class="callKeyPads">9</div>
+                    <div id="*" class="callKeyPads">*</div>
+                    <div id="0" class="callKeyPads">0</div>
+                    <div id="#" class="callKeyPads">#</div>  
+                </div>
+                <img src="./img/call2.png" id="call_btn">
+                <img src="./img/deleteNum.png" id="deleteNum_btn">
+            </div>
+<!-- --------------------------------전화중화면--------------------------------->
+            <div id="calling_screen" class="main_screen_list">
+                <div id="enteredNumber"></div>
+                <div id="callCondition">calling...</div>
+                <div id="callOption_box">
+                    <div id="mute" class="callOptions">
+                        <img src="./img/mute.png"><br><br>
+                        mute
+                    </div>
+                    <div id="showKeyPads" class="callOptions">
+                        <img src="./img/showKeyPad.png"><br><br>
+                        keypad
+                    </div>
+                    <div id="speaker" class="callOptions">
+                        <img src="./img/speaker.png"><br><br>
+                        speaker
+                    </div>
+                    <div id="addCall" class="callOptions">
+                        <img src="./img/addCall.png"><br><br>
+                        add call
+                    </div>
+                    <div id="faceTime" class="callOptions">
+                        <img src="./img/faceTime.png"><br><br>
+                        faceTime
+                    </div>
+                    <div id="contacts" class="callOptions">
+                        <img src="./img/contacts.png"><br><br>
+                        contacts
+                    </div>
+                </div>
+                <img src="./img/finishCall.png" id="finishCall_btn">
+            </div>
+<!-- --------------------------------ToDoList화면--------------------------------->
+            <div id="toDoList_screen" class="main_screen_list">
+                <div id="toDoList_head">
+                    ToDoList
+                </div>
+                <div id="toDoList_input">
+                    <input type="text" id="toDoThing" maxlength="15">
+                    <button id="addToDoThing">+</button>
+                </div>
+                <div id="toDoList_btn_box">
+                    <button id="allDelete" style="background-color: rgb(146, 32, 32);">전체 삭제</button>
+                    <button id="selectDelete" style="background-color: coral;">선택 삭제</button>
+                    <button id="selectFinish" style="background-color: aqua;">선택 수행 완료</button>
+                    <button id="selectReset" style="background-color: grey;">선택 수행 취소</button>
+                </div>
+                <div id="toDoList_list">
+                    <!-- <div id="list_head">
+                        <div id="list_head_1">
+                            <input type="checkbox" id="allCheck">
+                        </div>
+                        <div id="list_head_2">
+                            <h2>List</h2>
+                        </div>
+                    </div> -->
+                    <div id="list_list">        
+                        <!-- <div class="toDoListThing"> 
+                            <div class="toDoList_check">
+                                <input type="checkbox" class="toDoList_checkBox">
+                            </div>
+                            <div class="toDoList_text">
+                                JAVA공부하기
+                            </div>
+                        </div> -->
+                    </div>                     
+                </div>
+            </div>
+<!-- --------------------------------quiz--------------------------------->
+            <div id="quiz_home_screen" class="main_screen_list">
+                <div id="quiz_title">
+                    Random Quiz
+                </div>
+                <div id="quiz_btn_box">
+                    <button id="quiz_start">시작하기</button>
+                    <button id="quiz_exit">나가기</button>
+                </div>
+            </div>
+<!-- --------------------------------quiz Start--------------------------------->
+            <div id="quiz_start_screen" class="main_screen_list">
+                <div id="quiz_start_number">
+                    <div id="quiz_start_correctCount">
+                    </div>
+                </div>
+                <div id="quiz_start_quizBox">
+                    <div id="quiz_start_round">
+                        ROUND <span id="quiz_start_round_span"></span>
+                    </div>
+                    <div id="quiz_start_quiz"> <!--38글자까지 질문가능-->
+                    </div>
+                    <div id="quiz_start_answerList">
+                        <button id="answer1" value="a" class="quiz_answerList"></button>
+                        <button id="answer2" value="b" class="quiz_answerList"></button>
+                        <button id="answer3" value="c" class="quiz_answerList"></button>
+                        <button id="answer4" value="d" class="quiz_answerList"></button>
+                    </div>
+                </div>
+                <div id="correctAnswer"></div>                 <!-- 동그라미 -->
+                <img src="./img/x.png" id="incorrectAnswer">    <!-- 엑스-->
+            </div>
+<!-- --------------------------------quiz finish--------------------------------->
+            <div id="quiz_finish_screen" class="main_screen_list">
+                <div id="quiz_finish_head">
+                    퀴즈 종료
+                </div>
+                <div id="quiz_finish_count">
+                    　정답 갯수 <span id="quiz_finish_correctCount"></span>
+                </div>
+                <div id="quiz_finish_count2">
+                    　틀린 갯수 <span id="quiz_finish_incorrectCount"></span>
+                </div>
+                <div id="quiz_btn_box2">
+                    <button id="quiz_reStart">재시작</button>
+                    <button id="quiz_toGoQuiz">메인화면</button>
+                    <button id="quiz_toGoHome">종료</button>
+                </div>
+            </div>
+<!-- --------------------------------계산기화면--------------------------------->
+            <div id="calculator_screen" class="main_screen_list">
+                <div id="calculatingScreen">
+                    <div id="calc_firstScreen">
+                    </div>
+                    <div id="calc_secondScreen">
+                    </div>
+                </div>
+                <div id="calculator_btnBox">
+                    <div id="calc_AC" class="calcBtn lightGrey">AC</div>
+                    <div id="calc_parentheses" class="calcBtn lightGrey symbols">()</div>
+                    <div id="calc_/" class="calcBtn lightGrey symbols">/</div>
+                    <div id="calc_delete" class="calcBtn yellow">←</div>
+                    <div id="calc_7" class="calcBtn grey num">7</div>
+                    <div id="calc_8" class="calcBtn grey num">8</div>
+                    <div id="calc_9" class="calcBtn grey num">9</div>
+                    <div id="calc_X" class="calcBtn yellow symbols">*</div>
+                    <div id="calc_4" class="calcBtn grey num">4</div>
+                    <div id="calc_5" class="calcBtn grey num">5</div>
+                    <div id="calc_6" class="calcBtn grey num">6</div>
+                    <div id="calc_-" class="calcBtn yellow symbols">-</div>
+                    <div id="calc_1" class="calcBtn grey num">1</div>
+                    <div id="calc_2" class="calcBtn grey num">2</div>
+                    <div id="calc_3" class="calcBtn grey num">3</div>
+                    <div id="calc_+" class="calcBtn yellow symbols">+</div>
+                    <div id="calc_0" class="calcBtn bigBtn grey num">0</div>
+                    <div id="calc_." class="calcBtn grey num">.</div>
+                    <div id="calc_result" class="calcBtn yellow">=</div>
+                </div>
+            </div>
+<!-- --------------------------------끝--------------------------------->            
+        </div>  
+        <div id="bottom">
+            <div id="bottom_btn"></div>
+        </div>
+        <div id="side_btn_wrap">
+            <div id="side_btn1" class="side_btn"></div>
+            <div id="side_btn2" class="side_btn"></div>
+            <div id="side_btn3" class="side_btn"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
