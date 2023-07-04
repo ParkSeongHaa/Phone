@@ -5,14 +5,11 @@
 ### ⚙️개발 환경
 * Front : JavaScript, html, css
 ## ❗주요 기능
-#### 회원가입
-* ID 중복 체크
-* PW 암호화 (bcrypt 사용)
-* PW , PW 확인 값 일치 체크
+#### 화면전환
+* .hide() / .show() 사용
+* 상단메뉴바 , 각 어플리케이션 , 하단물리버튼에서 작동
 <p align="left">
-  <img src="https://user-images.githubusercontent.com/108784431/208563103-1ab8b533-e041-44eb-bc88-9ecfdc063427.jpg" width="30%" />
-  <img src="https://user-images.githubusercontent.com/108784431/208563116-3e251ac1-1755-49d9-9c45-605769997156.jpg" width="30%" />
-  <img src="https://user-images.githubusercontent.com/108784431/208563111-2ceca890-8241-45b4-8829-76412a9b8b26.jpg" width="30%" />
+  <img src="https://github.com/ParkSeongHaa/Phone/assets/136056187/67391d90-ff1a-465d-bf9f-2cff699a6a15" width="30%" />
 </p>
 
 #### 로그인
