@@ -1,25 +1,39 @@
-# 나만의 작은 폰
-* HTML CSS JS로 만들어본 간단한 페이지 입니다.  
+# 도서관 
+<!--* 도서관페이지입니다. -->
 ### 🗒️개요  
-* Front-end 공부를 하면서 배운 다양한 기능들을 재밌게 복습 할 방법이 없을까? 생각하다 나온 아이디어입니다. 앞으로 배우는 기능들 또한 어플형태로 모두 추가가 가능해 꾸준히 추가 예정입니다.
-### ⚙️개발 환경
-* Front : JavaScript, html, css
+* 지금까지 배운 front와 back의 모든 기능들을 활용해 보고자 만들게 된 사이트입니다.
+<!--### ⚙️개발 환경
+* Front : JavaScript, html, css -->
 ## ❗주요 기능
-#### 화면전환
-* 상단메뉴바 , 각 어플리케이션 , 하단물리버튼에서 각각의 메뉴로 이동(화면전환)
+#### 회원가입
+* 약관동의
+* 아이디 중복확인
+* PW 암호화 (bcrypt 사용)
+* PW , PW 확인 값 일치 체크
+* DAUM 주소api 사용
+* 필수값 모두 확인 후 회원가입 진행
 <p align="left">
-  <img src="https://github.com/ParkSeongHaa/Phone/assets/136056187/67391d90-ff1a-465d-bf9f-2cff699a6a15" width="30%" />
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/d4c54592-df64-411f-9fa1-1bd3697101fc">
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/848e5133-754d-42c5-9c18-ee3d6b43ee56">
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/d4635ca5-89cf-4a9a-b87d-e96cbe619adb">
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/d77b293c-4fe6-4100-9485-c54d6d53fb00">
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/f0ffd405-d41a-48f8-8a8f-8755b025256b">
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/c7dce8f1-3911-4ae9-8367-c0d5f5fddd8a">
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/ddb870c0-b60a-47e6-9cf5-8e8e494c3846">
 </p>
 
 
-#### 날짜 및 시간
-* 실시간 시간 갱신
+#### 로그인 
+* ID 검증
+* 암호화된 PW 비교
+* 로그인 시 세션 생성
 <p align="left">
-  <img width="40%" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/827eef1a-c3f0-4c91-8adf-8e42fe734530">
-  <img src="https://github.com/ParkSeongHaa/Phone/assets/136056187/3ea96d12-e246-4750-82ff-26875d44f8ae" width="40%"/>
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/b440c38b-e0a1-441d-a8a1-99b325248f38">
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/7c3653ea-c66d-4eae-ab8b-c95f10e75613">
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/11505ec0-5502-4227-baa8-4f511965c089">
 </p>
 
-#### 전화화면
+<!--#### 전화화면
 * 키보드 및 클릭으로 숫자입력
 * 숫자입력시 숫자버튼 hover
 * 통화버튼 클릭시 화면전환
