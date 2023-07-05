@@ -96,11 +96,12 @@
 * 페이지네이션 구현
 * 도서예약(예정)
 <p>
-<img width="771" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/8f92a3c8-1898-445d-aeb3-16392085a583">
-<img width="748" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/1ad55fec-8ae2-40f2-8c1e-a8b3e4099e90">
-<img width="775" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/bff10e2c-0c17-4912-8e0a-33d312ac33d4">
-
-
+<img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/8f92a3c8-1898-445d-aeb3-16392085a583">
+<img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/1ad55fec-8ae2-40f2-8c1e-a8b3e4099e90">
+<img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/bff10e2c-0c17-4912-8e0a-33d312ac33d4">
+<img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/fe3c6f8e-20da-43fd-a913-b4fc4fb11c53">
+<img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/be0b7293-0fba-427d-831c-52ec1301fc60">
+<img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/eff2afef-2a89-4cc3-91c8-44603a87bfa9">
 </p>
 
 
@@ -108,4 +109,4 @@
 
 ---
 ### ✍️회고
-
+* 공부를 시작하고나서부터 저의 진정한 개발 공부는 혼자서 프로젝트를 진행하기 전과 후로 나뉘었습니다. 많은 기능들은 연동시키고 또 그에따른 데이터들을 관리한다는것이, 그저 공부할때와는 다르게 '내가 정말 개발자의 길을 걷고있구나' 라는 생각이 들게했습니다. 알고있다고 생각했던 부분들에서도 오류가 생기고 제가 원하는 기능을 구현하기 위해 새로운 기능들을 검색하면서 분명 힘들었지만 그보다 설레이는 마음이 더 컸습니다. 특히 어떻게든 방법을 찾아 기능을 완성시켰을때의 희열은 계속 개발을 하고싶다는 열정을 불타오르게하기에 충분했습니다. 분명 아직은 미흡하지만 첫번째 프로젝트를 꾸준히 진행시킬 것이고, 꾸준히 성장하고자 합니다.
