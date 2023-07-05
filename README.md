@@ -8,7 +8,8 @@
 #### 화면전환
 * 상단메뉴바 , 각 어플리케이션 , 하단물리버튼에서 각각의 메뉴로 이동(화면전환)
 <p align="left">
-  <img src="https://github.com/ParkSeongHaa/Phone/assets/136056187/67391d90-ff1a-465d-bf9f-2cff699a6a15" width="30%" />
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/b4253990-0dfb-498d-804e-86035153f399">
+
 </p>
 
 
@@ -47,7 +48,6 @@
 * 퀴즈종료시 최종 정답 및 오답 갯수 출력
 * 퀴즈순서 랜덤으로 섞기(예정)
 <p>
-  <img src="https://user-images.githubusercontent.com/108784431/208565165-aa965cda-db01-463c-a254-a1880445c9ac.jpg" width="33%"/>
  <img width="20%" alt="quiz 1" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/9abc22ef-21cf-4453-b2b2-519bf0cd7ce9">
 <img width="20%" alt="quiz 2" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/a80b71c3-5395-4e4a-b1f4-8d2263998327">
 <img width="20%" alt="quiz 3" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/a525d905-4abb-41d0-bd08-b59e5b965f0a">
