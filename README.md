@@ -5,14 +5,17 @@
 <!--### ⚙️개발 환경
 * Front : JavaScript, html, css -->
 ## ❗주요 기능
+
 #### 회원가입
 * 약관동의
 * 아이디 중복확인
 * PW 암호화 (bcrypt 사용)
 * PW , PW 확인 값 일치 체크
+* 휴대전화 인증
 * DAUM 주소api 사용
 * 필수값 모두 확인 후 회원가입 진행
 <p align="left">
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/5019e5a6-4be1-405a-b952-1b979d9d9907">
   <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/d4c54592-df64-411f-9fa1-1bd3697101fc">
   <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/848e5133-754d-42c5-9c18-ee3d6b43ee56">
   <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/d4635ca5-89cf-4a9a-b87d-e96cbe619adb">
@@ -33,47 +36,48 @@
   <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/11505ec0-5502-4227-baa8-4f511965c089">
 </p>
 
-<!--#### 전화화면
-* 키보드 및 클릭으로 숫자입력
-* 숫자입력시 숫자버튼 hover
-* 통화버튼 클릭시 화면전환
-* 통화옵션버튼 클릭시 hover
-* 키패드 클릭시 키패드띄우기(예정)
-* 입력된 숫자 한번에 지우는 버튼(예정)
+#### ID/PW 찾기 
+* 기본정보입력 시 데이터 검증
+* ID → 출력
+* PW → 새롭게 설정
 <p>
-  <img width="421" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/ff5f1464-c357-41d5-97ad-abf4943c62da">
-<img width="449" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/bdaf809f-f214-47fa-951f-6649d9e0947c">
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/d14f942e-ba89-46cd-af28-c52c116621b5">
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/4fcdf545-9a34-4b49-86a3-1932868e06a3">
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/6b3e1bc5-e8a9-40af-b4fe-0d7489df5832">
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/356434c8-298d-4b83-b07b-8384688ad247">
 </p>
 
-#### ToDoList
-* 할 일 추가
-* 전체 및 선택 삭제
-* 선택 완료
-* 선택 완료취소
-<img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/fbcd930d-d6dc-49cd-945e-256ff1bb4f4f">
-
-#### Quiz
-* 실시간 정답갯수
-* 정답 및 오답시 각각 O , X 출력
-* 퀴즈종료시 최종 정답 및 오답 갯수 출력
-* 퀴즈순서 랜덤으로 섞기(예정)
+#### 마이페이지
+* 정보수정 시 기본 데이터 모두 불러오기 
+* 일부 항목은 수정불가
+* 회원탈퇴 → 비밀번호 확인 후 탈퇴진행(데이터삭제)
 <p>
- <img width="20%" alt="quiz 1" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/9abc22ef-21cf-4453-b2b2-519bf0cd7ce9">
-<img width="20%" alt="quiz 2" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/a80b71c3-5395-4e4a-b1f4-8d2263998327">
-<img width="20%" alt="quiz 3" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/a525d905-4abb-41d0-bd08-b59e5b965f0a">
-<img width="20%" alt="quiz4" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/ff68146d-e199-4617-9354-3726982d0db1">
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/b6e2dd63-0879-4598-86e9-59f27e816882">
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/2cdbb41b-77af-46d7-819c-f9ce2a863093">
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/9add9709-c9b7-4f9b-9966-7327f8a7ae29">
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/4ccf7364-36ac-450f-a74e-c058005a30cd">
 </p>
 
-#### 계산기
-* 키보드 및 클릭으로 입력가능
-* 엔터/백스페이스로 결과보기/지우기 가능
+#### 로그아웃
+* 세션삭제
 <p>
-<img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/8d7a3586-8f3e-4c59-b04a-a8ded97e0c2a">
-
+ <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/23136490-85c1-4357-ba32-1543509af49a">
 </p>
 
-#### 날씨(에정)
-* 원하는 도시의 날씨 확인(예정)
+#### 홈화면
+* 슬라이드(인터벌,bxSlider 두가지로 구현)
+* 팝업(쿠키)
+<p>
+<img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/cf2e2643-5fe9-4cf0-8cb3-c94c553881c8">
+</p>
+
+#### 게시판
+* 글 작성, 읽기, 수정, 삭제 (CRUD) 구현
+* 댓글 작성, 읽기, 수정, 삭제 (CRUE) 구현
+* 게시판 제목, 내용 , 작성자별 검색 기능 구현
+* 페이지네이션 구현
+* 첨부파일 등록시 미리보기 구현
+* 게시글 수정 작성일 갱신
 <p>
 
 </p>
@@ -81,4 +85,4 @@
 
 ---
 ### ✍️회고
-배운것을 활용하고 복습하자는 취지로 시작한 가벼운 프로젝트였지만, 진행됨에따라 새로운 느낌이 들었습니다. 분명 배운 기능들이였지만 그것들을 섞고, 그러다 보면 또 다른 아이디어가 생각나고 추가하고 배치하고 그런 과정들이 너무 즐거웠습니다. 정확하진 않지만 어렴풋 알기에 그냥 넘어갔던 코드들에 대해 다시한번 공부하게 되었고, 앞으로 배울 코드들을 이 프로젝트에 바로바로 추가하면 좋을 것 같습니다😊
+
