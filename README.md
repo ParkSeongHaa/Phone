@@ -26,6 +26,7 @@
 </p>
 
 
+
 #### 로그인 
 * ID 검증
 * 암호화된 PW 비교
@@ -35,6 +36,8 @@
   <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/7c3653ea-c66d-4eae-ab8b-c95f10e75613">
   <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/11505ec0-5502-4227-baa8-4f511965c089">
 </p>
+
+
 
 #### ID/PW 찾기 
 * 기본정보입력 시 데이터 검증
@@ -47,6 +50,8 @@
   <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/356434c8-298d-4b83-b07b-8384688ad247">
 </p>
 
+
+
 #### 마이페이지
 * 정보수정 시 기본 데이터 모두 불러오기 
 * 일부 항목은 수정불가
@@ -58,11 +63,15 @@
   <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/4ccf7364-36ac-450f-a74e-c058005a30cd">
 </p>
 
+
+
 #### 로그아웃
 * 세션삭제
 <p>
  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/23136490-85c1-4357-ba32-1543509af49a">
 </p>
+
+
 
 #### 홈화면
 * 슬라이드(인터벌,bxSlider 두가지로 구현)
@@ -70,6 +79,7 @@
 <p>
 <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/cf2e2643-5fe9-4cf0-8cb3-c94c553881c8">
 </p>
+
 
 #### 게시판
 * 글 작성, 읽기, 수정, 삭제 (CRUD) 구현
@@ -89,6 +99,8 @@
 <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/d1daf943-80b9-476f-a949-9273c494bedd">
 <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/dbdb4508-3d1a-4589-9ca7-684920f99e67">
 </p>
+
+
 
 #### 도서 관리 및 검
 * 도서 등록, 읽기, 수정, 삭제 (CRUD) 구현
