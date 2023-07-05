@@ -19,7 +19,7 @@
   <img src="https://github.com/ParkSeongHaa/Phone/assets/136056187/3ea96d12-e246-4750-82ff-26875d44f8ae" width="40%"/>
 </p>
 
-#### 전화화
+#### 전화화면
 * 키보드 및 클릭으로 숫자입력
 * 숫자입력시 숫자버튼 hover
 * 통화버튼 클릭시 화면전환
