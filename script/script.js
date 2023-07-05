@@ -27,8 +27,8 @@ function getDate(){                         //날짜표시
         weekday[5] = "금요일";
         weekday[6] = "토요일";
     let day = weekday[today.getDay()]
-    let dateOnScreen = year + "." + month + "." + date + "<br>" + day
-    $("#date").html(dateOnScreen); 
+    let dateOnScreen = year + "." + month + "." + date + "<br> " + day
+    $("#date").html(dateOnScreen);
 }
 
 let timeInterval = setInterval(getTime,1000)
