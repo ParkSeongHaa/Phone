@@ -13,7 +13,6 @@ $(function(){
     calculate()
 })
 let today = new Date();
-let dateInterval = setInterval(getTime,1000)
 function getDate(){                         //날짜표시
     let year = today.getFullYear();
     let month = today.getMonth() +1;
