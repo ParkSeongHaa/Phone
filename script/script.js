@@ -36,6 +36,11 @@ function getTime(){                         //시간표시
     today = new Date();
     let hours = today.getHours(); // 시
     let minutes = today.getMinutes();  // 분
+    let StringMinLength = minutes.toString().length;
+     if(StringMinLength==1){        //10분 미만일때 0을 붙임
+         minutes = "0"+minutes;
+     }
+
     let timeOnScreen = hours + ":" + minutes
     console.log(timeOnScreen);
     $("#time").text(timeOnScreen);
