@@ -24,8 +24,7 @@
   <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/c7dce8f1-3911-4ae9-8367-c0d5f5fddd8a">
   <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/ddb870c0-b60a-47e6-9cf5-8e8e494c3846">
 </p>
-
-
+<br><br><br>
 
 #### 로그인 
 * ID 검증
@@ -36,7 +35,7 @@
   <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/7c3653ea-c66d-4eae-ab8b-c95f10e75613">
   <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/11505ec0-5502-4227-baa8-4f511965c089">
 </p>
-
+<br><br><br>
 
 
 #### ID/PW 찾기 
@@ -49,7 +48,7 @@
   <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/6b3e1bc5-e8a9-40af-b4fe-0d7489df5832">
   <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/356434c8-298d-4b83-b07b-8384688ad247">
 </p>
-
+<br><br><br>
 
 
 #### 마이페이지
@@ -62,7 +61,7 @@
   <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/9add9709-c9b7-4f9b-9966-7327f8a7ae29">
   <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/4ccf7364-36ac-450f-a74e-c058005a30cd">
 </p>
-
+<br><br><br>
 
 
 #### 로그아웃
@@ -70,7 +69,7 @@
 <p>
  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/23136490-85c1-4357-ba32-1543509af49a">
 </p>
-
+<br><br><br>
 
 
 #### 홈화면
@@ -79,6 +78,7 @@
 <p>
 <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/cf2e2643-5fe9-4cf0-8cb3-c94c553881c8">
 </p>
+<br><br><br>
 
 
 #### 게시판
@@ -99,7 +99,7 @@
 <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/d1daf943-80b9-476f-a949-9273c494bedd">
 <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/dbdb4508-3d1a-4589-9ca7-684920f99e67">
 </p>
-
+<br><br><br>
 
 
 #### 도서 관리 및 검
@@ -115,7 +115,7 @@
 <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/be0b7293-0fba-427d-831c-52ec1301fc60">
 <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/eff2afef-2a89-4cc3-91c8-44603a87bfa9">
 </p>
-
+<br><br>
 
 
 
