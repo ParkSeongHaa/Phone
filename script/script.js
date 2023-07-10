@@ -1,6 +1,7 @@
 $(function(){
     getDate()
     getTime()
+    getweather()
     displayMenu()
     changeScreenFromBtn()
     changeScreenInHome()
@@ -46,6 +47,43 @@ function getTime(){                         //시간표시
     console.log(timeOnScreen);
     $("#time").text(timeOnScreen);
 }
+
+function getweather(){
+    const sunny = '<img src="./img/sunny.png" class="weatherIcon">';
+    const rain = '<img src="./img/rain.png" class="weatherIcon">';
+    const cloud = '<img src="./img/cloud.png" class="weatherIcon">';
+    const snow = '<img src="./img/snow.png" class="weatherIcon">';
+    const storm = '<img src="./img/storm.png" class="weatherIcon">';
+    
+             $.ajax({
+                url:'https://api.openweathermap.org/data/2.5/weather?q=' +  "daegu" + ',kr&APPID=a0cd335023e5654308fd81198ce68f9c',
+                method:'get',
+                dataType:'json'
+            }).done(function(response){ //api로 가져온 날씨정보 response에 저장
+                console.log(response)
+                let todayWeather=response.weather[0].main;
+                if(todayWeather == 'Clear') {
+                    todayWeather = sunny;
+                } else if(todayWeather == 'Rain'){
+                    todayWeather = rain;
+                } else if(todayWeather == 'Clouds') {
+                    todayWeather = cloud;
+                } else if(todayWeather == 'Snow') {
+                    todayWeather = snow;
+                } else if(todayWeather == 'Thunderstorm') {
+                    todayWeather = storm;
+                } else {
+                    todayWeather = "";
+                }
+
+                const weather = document.getElementById('weather')
+                weather.innerHTML = "　　<span>" + 
+                                    (response.main.temp -273.15).toFixed(1) + "</span>" + 
+                              "　" + todayWeather
+            })
+}
+
+
 
 function displayMenu(){
     $("#menuList").hide();
@@ -351,7 +389,7 @@ function quizFinish(){
     })
 }
 var clickedNum;
-var displayedNum = "";
+var displayedNum = " ";
 var parentheses = 1;
 var first_parentheses = "(";
 var second_parentheses = ")";
@@ -364,6 +402,7 @@ function calculate(){           //계산기
             clickedNum != "←" &&
             clickedNum != "=")
         displayedNum += clickedNum;
+        console.log(displayedNum)
         $("#calc_firstScreen").text(displayedNum);
     })
 
