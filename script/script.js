@@ -13,7 +13,9 @@ $(function(){
     calculate()
 })
 let today = new Date();
+let dateInterval = setInterval(getDate,1000)
 function getDate(){                         //날짜표시
+    today = new Date();
     let year = today.getFullYear();
     let month = today.getMonth() +1;
     let date = today.getDate();
@@ -52,7 +54,7 @@ function displayMenu(){
     })
 }
 function changeScreenFromBtn(){
-    $("#bottom_btn").click(toHome);
+    $("#bottom_btn").click(toHome); //홈키로 메인화면가기
 }
 function changeScreenInHome(){          //어플 클릭시 화면전환
     $("#call").click(toCall);           // 전화화면
@@ -69,24 +71,18 @@ function changeScreenFromMenuBar(){     //상단 메뉴에서 클릭시 화면�
     $("#toCalc").click(toCalc)      //계산기 화면으로
 }
 
+var number = "";
+var click;
+var count = 0;
+var stick = "-";
 function callScreen(){
-    var number = "";
-    var click;
-    var count = 0;
-    var stick = "-";
     $(".callKeyPads").click(function(){
         var thisBtn = $(this);
         $(this).css('background-color','rgb(68, 68, 68)');      //클릭시 색변환
         setTimeout(function(){
             thisBtn.css('background-color',' rgb(209, 209, 209)'); //색 원래대로
         },250);
-        
-        if(finishCall==true){ //통화종료 후 돌아오면 초기화
-            count = 0;
-            number = "";
-        }
         click = $(this).text();
-        finishCall = false;
         number += click;            // 클릭된 번호 추가
         count++         
         if(count==3){               // 전화번호사이 - 추가
@@ -96,8 +92,43 @@ function callScreen(){
         }
         $("#display_number").text(number);      //출력
     })
+
     $("#deleteNum_btn").click(function(){       // 하나씩 지우기
-        var a = number.length
+        deleteCallNum()
+    })
+
+    document.addEventListener('keydown', function (event){ //키패드 입력을 통한 출력
+        var keypadClick = event.key;
+        if(keypadClick >= '0' && keypadClick <= '9' && event.code.startsWith('Numpad') ||
+        keypadClick >= '0' && keypadClick <= '9' && event.code.startsWith('Digit')) {
+            number += keypadClick;
+            count++
+            if(count==3){
+                number += stick;
+            } else if(count==7){
+                number += stick;
+            }
+            $("#display_number").text(number);
+
+            var keyboardClickNum = parseInt(keypadClick);       
+            if (keyboardClickNum >= 0 && keyboardClickNum <= 9) {       // 키보드로 숫자입력시에도 hover
+                $("#"+keyboardClickNum).css('background-color','rgb(68, 68, 68)');      //클릭시 색변환
+                setTimeout(function(){
+                    $("#"+keyboardClickNum).css('background-color',' rgb(209, 209, 209)'); //색 원래대로
+                },250);
+            }
+
+            // if (event.key === 'Backspace') {            // 백스페이스 -> 지우기     왜안돼지??
+            //     deleteCallNum()
+            // }
+        }
+
+
+    })
+}
+
+function deleteCallNum(){
+    var a = number.length
         if (number.charAt(a - 1) === '-') {     //  마지막 글자가 -면 2개 지움
             number = number.slice(0, -2);
             count --
@@ -108,34 +139,8 @@ function callScreen(){
             count--;
           }
           $("#display_number").text(number);      //출력
-    })
-    document.addEventListener('keydown', function (event){ //키패드 입력을 통한 출력
-        var keypadClick = event.key;
-        if(keypadClick >= '0' && keypadClick <= '9' && event.code.startsWith('Numpad') ||
-        keypadClick >= '0' && keypadClick <= '9' && event.code.startsWith('Digit')) {
-            if(finishCall==true){ //통화종료 후 돌아오면 초기화
-                count = 0;
-                number = "";
-            }
-            finishCall = false;
-            number += keypadClick;
-            count++
-            if(count==3){
-                number += stick;
-            } else if(count==7){
-                number += stick;
-            }
-            $("#display_number").text(number);
-        }
-        // if (event.key === 'Enter' || event.code === 'NumpadEnter') {    // enter -> 전화걸기
-        //     var enteredNumber = $("#display_number").text();         // 계산기랑 겹침
-        //     $("#call_screen").hide();
-        //     $("#calling_screen").show();
-        //     $("#enteredNumber").text(enteredNumber)
-        // }
-    })
 }
-var finishCall = false;
+
 function callingScreen(){
     $("#call_btn").click(function(){                    //전화걸기
         var enteredNumber = $("#display_number").text();
@@ -147,7 +152,8 @@ function callingScreen(){
         $("#call_screen").show();
         $("#calling_screen").hide();
         $("#display_number").text("")
-        finishCall = true; //통화종료시 초기화를 위한 변수
+        count = 0;
+        number = "";
     })
     $('.callOptions').click(function() {                // 통화중 옵션 css
         var $this = $(this);
@@ -160,20 +166,11 @@ function callingScreen(){
         }
       });
     
-    //   document.addEventListener('keydown', function (event){ //키패드 입력을 통한 출력
-    //     var keypadClick = event.key;                     // 계산기랑 중복됨 ㅠ
-    //     if (event.key === 'Escape') {                           //esc -> 모두지우기
-    //         $("#call_screen").show();
-    //         $("#calling_screen").hide();
-    //         $("#display_number").text("")
-    //         finishCall = true; //통화종료시 초기화를 위한 변수
-    //     }
-    // })
+    
 }
 
 let list_list = document.getElementById('list_list');
 function ToDoList(){
-    
     $("#addToDoThing").click(function(){        // 할일 추가
         addToDoThing()
     })
@@ -182,11 +179,9 @@ function ToDoList(){
             addToDoThing()
         }
     })
-
     $("#allDelete").click(function(){       //전체삭제
         $("#list_list").text("");
     })
-
     $("#selectDelete").click(function(){    //선택삭제
         var checkCount = document.getElementsByClassName('toDoList_checkBox');
         for(var i=0; i<checkCount.length; i++) {
@@ -196,7 +191,6 @@ function ToDoList(){
             }
         }
     })
-
     $("#selectFinish").click(function(){    //선택 수행완료
         var checkCount = document.getElementsByClassName('toDoList_checkBox');
         for(var i=0; i<checkCount.length; i++) {
@@ -206,7 +200,6 @@ function ToDoList(){
         }
         $(".toDoList_checkBox").prop("checked",false);
     })
-
     $("#selectReset").click(function(){    //선택 수행취소
         var checkCount = document.getElementsByClassName('toDoList_checkBox');
         for(var i=0; i<checkCount.length; i++) {
@@ -398,13 +391,6 @@ function calculate(){           //계산기
 
     $("#calc_result").click(function(){                  // 결과보기
         var result = eval(displayedNum);
-        // if(result.toString().includes('.')){
-        //     var sosuLength = result.toString().split('.')[1].length;
-        //     result = parseFloat(result).toFixed(sosuLength);
-        //     $("#calc_secondScreen").text(result);
-        // } else{
-            
-        // }
         $("#calc_secondScreen").text(result);
 
     })
