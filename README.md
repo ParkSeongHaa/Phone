@@ -8,16 +8,16 @@
 #### 화면전환
 * 상단메뉴바 , 각 어플리케이션 , 하단물리버튼에서 각각의 메뉴로 이동(화면전환)
 <p align="left">
-  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/b4253990-0dfb-498d-804e-86035153f399">
-
+  <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/dcccedb4-908d-4645-920a-52c9ae283f85">
 </p>
 
 
 #### 날짜 및 시간
 * 실시간 시간 갱신
 <p align="left">
-  <img width="40%" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/827eef1a-c3f0-4c91-8adf-8e42fe734530">
-  <img src="https://github.com/ParkSeongHaa/Phone/assets/136056187/3ea96d12-e246-4750-82ff-26875d44f8ae" width="40%"/>
+  <img width="40%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/99104696-f089-4985-855d-da8736ffe94a">
+  <img width="40%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/88fc2d64-17a2-457a-ba21-3439227d591f">
+
 </p>
 
 
@@ -30,8 +30,9 @@
 * 키패드 클릭시 키패드띄우기(예정)
 * 입력된 숫자 한번에 지우는 버튼(예정)
 <p>
-  <img width="421" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/ff5f1464-c357-41d5-97ad-abf4943c62da">
-<img width="449" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/bdaf809f-f214-47fa-951f-6649d9e0947c">
+  <img width="40%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/2257ca85-5ce3-43ec-bdc8-a1a9ec8639fd">
+<img width="40%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/8ee538a1-003e-4d2f-882f-8119b3543af5">
+
 
 </p>
 
@@ -40,7 +41,8 @@
 * 전체 및 선택 삭제
 * 선택 완료
 * 선택 완료취소
-<img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/fbcd930d-d6dc-49cd-945e-256ff1bb4f4f">
+<img width="40%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/6a83c946-3829-4745-9122-2e73656668b9">
+
 
 #### Quiz
 * 실시간 정답갯수
@@ -59,21 +61,15 @@
 * 키보드 및 클릭으로 입력가능
 * 엔터/백스페이스로 결과보기/지우기 가능
 <p>
-  <img src="https://user-images.githubusercontent.com/108784431/208565576-60041e94-2e31-4a8c-b109-f2dd327ec807.jpg" width="30%"/>
-  <img src="https://user-images.githubusercontent.com/108784431/208565591-797f37a1-7b77-470c-8d54-c1bd897c12b2.jpg" width="30%"/>
-  <img src="https://user-images.githubusercontent.com/108784431/208565601-f211f5b6-2c2b-4952-ae4f-25ced498d64a.jpg" width="30%"/>
-  <img src="https://user-images.githubusercontent.com/108784431/208566727-be4f85f3-6b4c-4135-afcc-5801335be1d8.jpg" width="30%"/>
-  <img src="https://user-images.githubusercontent.com/108784431/208566766-689409fc-f5bf-4e16-a6a6-e807abb38aff.jpg" width="30%"/>
-</p>
 <img width="30%" alt="image" src="https://github.com/ParkSeongHaa/Phone/assets/136056187/8d7a3586-8f3e-4c59-b04a-a8ded97e0c2a">
+</p>
+
 
 
 #### 날씨(에정)
 * 원하는 도시의 날씨 확인(예정)
 <p>
-  <img src="https://user-images.githubusercontent.com/108784431/208567400-c1fbc966-b8d3-4879-9e06-2847da5f1793.jpg" width="30%"/>
-  <img src="https://user-images.githubusercontent.com/108784431/208567388-90528bbd-0fb6-4eab-8aa2-6719146f0320.jpg" width="30%"/>
-  <img src="https://user-images.githubusercontent.com/108784431/208567409-adadc0bf-f788-4ef1-b98c-6a9e26795aee.jpg" width="30%"/>
+
 </p>
 
 ---
