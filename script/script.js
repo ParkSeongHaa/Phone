@@ -13,6 +13,8 @@ $(function(){
     quizFinish()
     calculate()
 })
+
+//----------------------------------날짜---------------------------------------------------------
 let today = new Date();
 let dateInterval = setInterval(getDate,1000)
 function getDate(){                         //날짜표시
@@ -32,7 +34,7 @@ function getDate(){                         //날짜표시
     let dateOnScreen = year + "." + month + "." + date + "<br> " + day
     $("#date").html(dateOnScreen);
 }
-
+//----------------------------------시간---------------------------------------------------------
 let timeInterval = setInterval(getTime,1000)
 function getTime(){                         //시간표시
     today = new Date();
@@ -48,42 +50,242 @@ function getTime(){                         //시간표시
     $("#time").text(timeOnScreen);
 }
 
+//----------------------------------날씨---------------------------------------------------------
+var cityMap = {
+    "서울": "Seoul",
+    "부산": "Busan",
+    "인천": "Incheon",
+    "대구": "Daegu",
+    "대전": "Daejeon",
+    "광주": "Gwangju",
+    "수원": "Suwon",
+    "울산": "Ulsan",
+    "창원": "Changwon",
+    "고양": "Goyang",
+    "용인": "Yongin",
+    "성남": "Seongnam",
+    "부천": "Bucheon",
+    "안산": "Ansan",
+    "안양": "Anyang",
+    "화성": "Hwaseong",
+    "경기도": "Gyeonggi-do",
+    "강원도": "Gangwon-do",
+    "충청북도": "Chungcheongbuk-do",
+    "충청남도": "Chungcheongnam-do",
+    "전라북도": "Jeollabuk-do",
+    "전라남도": "Jeollanam-do",
+    "경상북도": "Gyeongsangbuk-do",
+    "경상남도": "Gyeongsangnam-do",
+    "제주도": "Jeju-do"
+  };
+$("#cityName").click(function(){            //도시 리스트 활성화
+    // $("#cityList").css('display','block');
+    $("#cityList").slideToggle();
+})
+let clickedCity = 'Daegu'
+let cityLat;
+let cityLon;
+$(".koreaCitys").click(function(){          //도시 변경
+    clickedCity = cityMap[$(this).text()];
+    $("#cityName").text($(this).text());
+    $("#cityList").css('display','none');
+    $("#temp_per_hour").innerHTML = "";
+    $("#weekTempBox").innerHTML = "";
+    getweather();
+})
+
+// let weatherInterval = setInterval(getweather,600000) //10분에 한번
 function getweather(){
     const sunny = '<img src="./img/sunny.png" class="weatherIcon">';
     const rain = '<img src="./img/rain.png" class="weatherIcon">';
     const cloud = '<img src="./img/cloud.png" class="weatherIcon">';
     const snow = '<img src="./img/snow.png" class="weatherIcon">';
     const storm = '<img src="./img/storm.png" class="weatherIcon">';
-    
+    const mist = '<img src="./img/mist.png" class="weatherIcon">';
+    let todayWeatherBackground;
              $.ajax({
-                url:'https://api.openweathermap.org/data/2.5/weather?q=' +  "daegu" + ',kr&APPID=a0cd335023e5654308fd81198ce68f9c',
+                url:'https://api.openweathermap.org/data/2.5/weather?q=' +  clickedCity + ',kr&APPID=a0cd335023e5654308fd81198ce68f9c',
                 method:'get',
                 dataType:'json'
             }).done(function(response){ //api로 가져온 날씨정보 response에 저장
+                console.log("콘솔1")
                 console.log(response)
                 let todayWeather=response.weather[0].main;
                 if(todayWeather == 'Clear') {
                     todayWeather = sunny;
+                    todayWeatherBackground = 'sunny';
                 } else if(todayWeather == 'Rain'){
                     todayWeather = rain;
+                    todayWeatherBackground = 'rain';
                 } else if(todayWeather == 'Clouds') {
                     todayWeather = cloud;
+                    todayWeatherBackground = 'cloud';
                 } else if(todayWeather == 'Snow') {
                     todayWeather = snow;
+                    todayWeatherBackground = 'snow';
                 } else if(todayWeather == 'Thunderstorm') {
                     todayWeather = storm;
+                    todayWeatherBackground = 'storm';
+                } else if(todayWeather == 'Mist'){
+                    todayWeather = mist;
+                    todayWeatherBackground = 'mist';
                 } else {
                     todayWeather = "";
                 }
 
-                const weather = document.getElementById('weather')
-                weather.innerHTML = "　　<span>" + 
-                                    (response.main.temp -273.15).toFixed(1) + "</span>" + 
-                              "　" + todayWeather
+                $("#weather").html("　　<span>" +           //상단표시줄
+                            (response.main.temp -273.15).toFixed(1) + "</span>" + 
+                            "　" + todayWeather)
+                $("#weather_screen_background").removeClass();                      //기존배경삭제
+                $("#weather_screen_background").addClass("main_screen_list")        // list Class 추가
+                $("#weather_screen_background").addClass(todayWeatherBackground)    //날씨배경 추가
+                $("#temperature").text((response.main.temp -273.15).toFixed(1)+"º") //온도 표시
+                $("#explain_weather").html(response.weather[0].main)                //날씨 설명
+                $("#high_low_temperature").text("최고:"+(response.main.temp_max-273.15).toFixed(1)+"º　최저"+
+                                                (response.main.temp_min-273.15).toFixed(1)+"º")
+            })
+
+            $.ajax({        //입력 도시 위도경도 찾기
+                url:'http://api.openweathermap.org/geo/1.0/direct?q='+clickedCity+'&limit=5&appid=a0cd335023e5654308fd81198ce68f9c',
+                method:'get',
+                dataType:'json'
+            }).done(function(response){
+                console.log("콘솔2")
+                console.log(response);
+                cityLat = response[0].lat;
+                cityLon = response[0].lon;
+                $.ajax({        
+                    url: 'http://api.openweathermap.org/data/2.5/forecast?lat='+cityLat+'&lon='+cityLon+'&appid=a0cd335023e5654308fd81198ce68f9c',
+                    method:'get',
+                    dataType:'json'
+                }).done(function(response2){
+                    console.log("콘솔3")
+                    console.log(response2)
+                    let weatherIconInUnit;
+                    let time = 6;
+                    for(var i=0; i<7; i++){     //오늘하루 3시간 단위로 날씨표시(7번)
+                        
+                        let temp_per_hour_unit = document.createElement('div')
+                        temp_per_hour_unit.setAttribute('class','temp_per_hour_unit')
+
+                        let tempTime = document.createElement('div');
+                        tempTime.setAttribute('class','tempTime');
+                        tempTime.innerHTML = (time + i*3) + "시"
+
+                        let tempIcon = document.createElement('div');
+                        tempIcon.setAttribute('class','tempIcon');
+                        if(response2.list[i].weather[0].main == 'Clear'){
+                            weatherIconInUnit = sunny;
+                        } else if(response2.list[i].weather[0].main == 'Rain'){
+                            weatherIconInUnit = rain;
+                        } else if(response2.list[i].weather[0].main == 'Clouds'){
+                            weatherIconInUnit = cloud;
+                        } else if(response2.list[i].weather[0].main == 'Snow'){
+                            weatherIconInUnit = snow;
+                        } else if(response2.list[i].weather[0].main == 'Storm'){
+                            weatherIconInUnit = storm;
+                        } else if(response2.list[i].weather[0].main == 'Mist'){
+                            weatherIconInUnit = mist;
+                        }
+                        tempIcon.innerHTML = weatherIconInUnit;
+
+                        let temp = document.createElement('div');
+                        temp.setAttribute('class','temp');
+                        temp.innerHTML = (response2.list[i].main.temp-273.15).toFixed(1)+"º";
+
+                        temp_per_hour_unit.appendChild(tempTime)
+                        temp_per_hour_unit.appendChild(tempIcon)
+                        temp_per_hour_unit.appendChild(temp)
+                        $("#temp_per_hour").append(temp_per_hour_unit);
+                        $(".tempIcon img").removeClass().addClass('tempIconImg');
+                    }
+
+                    // 5일간의 일기예보
+
+                    for(var j=0; j<5; j++){
+                        let eachWeekTemp = document.createElement('div')
+                        eachWeekTemp.setAttribute('class','eachWeekTemp')
+
+                        let day = document.createElement('div');                    //요일
+                        day.setAttribute('class','day weekTempUnit');
+                        if(j==0){
+                            day.innerHTML="오늘"
+                        } else{
+                            var dayCount = today.getDay()+j
+                            var weekday = new Array(7);
+                            weekday[0] = "일요일";
+                            weekday[1] = "월요일";
+                            weekday[2] = "화요일";
+                            weekday[3] = "수요일";
+                            weekday[4] = "목요일";
+                            weekday[5] = "금요일";
+                            weekday[6] = "토요일";
+                            let dayName = dayCount > 6 ?  weekday[dayCount-7] : weekday[dayCount]
+                            day.innerHTML = dayName;
+                        }
+
+
+                        let weekWeatherIcon = document.createElement('div');            //날씨아이콘
+                        weekWeatherIcon.setAttribute('class','weekWeatherIcon weekTempUnit');
+                        let weekWeatherIconImg;
+                        if(response2.list[j*8].weather[0].main == 'Clear'){
+                            weekWeatherIconImg = sunny;
+                        } else if(response2.list[j*8].weather[0].main == 'Rain'){
+                            weekWeatherIconImg = rain;
+                        } else if(response2.list[j*8].weather[0].main == 'Clouds'){
+                            weekWeatherIconImg = cloud;
+                        } else if(response2.list[j*8].weather[0].main == 'Snow'){
+                            weekWeatherIconImg = snow;
+                        } else if(response2.list[j*8].weather[0].main == 'Storm'){
+                            weekWeatherIconImg = storm;
+                        } else if(response2.list[j*8].weather[0].main == 'Mist'){
+                            weekWeatherIconImg = mist;
+                        }
+                        weekWeatherIcon.innerHTML = weekWeatherIconImg;
+
+
+                        let minTemp = document.createElement('div')                 //최저온도
+                        minTemp.setAttribute('class','minTemp weekTempUnit')
+                        let minTempArray = [];
+                        for(var k=0; k<8; k++){                             //배열에 하루동안의 최저값을 담은후 최저값만 출력
+                            var mix = (parseInt(j)*8)+parseInt(k)
+                            minTempArray.push((response2.list[mix].main.temp_min-273.15).toFixed(1));
+                        }
+                        let minValue = Math.min.apply(null, minTempArray);
+                        minTemp.innerHTML = minValue+"º";
+
+
+                        let tempGraph = document.createElement('div')                   //온도그래프
+                        tempGraph.setAttribute('class','tempGraph weekTempUnit')
+                        tempGraph.innerHTML = '<div class="tempGraphBack"></div><div class="tempGraphFront"></div>'
+
+
+                        let maxTemp = document.createElement('div')                    //최고온도
+                        maxTemp.setAttribute('class','maxTemp weekTempUnit')
+                        let maxTempArray = [];
+                        for(var k=0; k<8; k++){                     //배열에 하루동안의 최고값을 담은후 최저값만 출력
+                            var mix = (parseInt(j)*8)+parseInt(k)
+                            minTempArray.push((response2.list[mix].main.temp_min-273.15).toFixed(1));
+                        }
+                        let maxValue = Math.max.apply(null, minTempArray);
+                        maxTemp.innerHTML = maxValue+"º";
+
+                        eachWeekTemp.appendChild(day)
+                        eachWeekTemp.appendChild(weekWeatherIcon)
+                        eachWeekTemp.appendChild(minTemp)
+                        eachWeekTemp.appendChild(tempGraph)
+                        eachWeekTemp.appendChild(maxTemp)
+                        $("#weekTempBox").append(eachWeekTemp);
+                        $(".weekWeatherIcon img").removeClass().addClass('tempIconImg');
+                        $(".tempGraphFront").eq(j).css('width',(maxValue-minValue)*10)      //j번째 날짜의 그래프의 크기 조절
+                    }
+
+
+                })
             })
 }
 
-
+//----------------------------------화면전환---------------------------------------------------------
 
 function displayMenu(){
     $("#menuList").hide();
@@ -99,7 +301,8 @@ function changeScreenInHome(){          //어플 클릭시 화면전환
     $("#toDoList").click(toToDoList); // ToDoList 화면 띄우기
     $("#quiz").click(toQuiz);           // 퀴즈 화면 띄우기
     $("#calculator").click(toCalc);     //계산기 화면 띄우기
-
+    $("#weather").click(toWeather);     //날씨 어플로
+    $("#weatherApp").click(toWeather);  //날씨 어플로
 }
 function changeScreenFromMenuBar(){     //상단 메뉴에서 클릭시 화면전환
     $("#tohome").click(toHome)      //홈화면으로
@@ -108,6 +311,8 @@ function changeScreenFromMenuBar(){     //상단 메뉴에서 클릭시 화면�
     $("#toQuiz").click(toQuiz)      // 퀴즈 화면으로
     $("#toCalc").click(toCalc)      //계산기 화면으로
 }
+
+//----------------------------------전화---------------------------------------------------------
 
 var number = "";
 var click;
@@ -203,9 +408,9 @@ function callingScreen(){
           $this.css('opacity', '0.8');
         }
       });
-    
-    
 }
+
+//----------------------------------ToDoList---------------------------------------------------------
 
 let list_list = document.getElementById('list_list');
 function ToDoList(){
@@ -266,6 +471,7 @@ function addToDoThing(){
         $("#toDoThing").val("");
 }
 
+//----------------------------------Quiz---------------------------------------------------------
 
 function quiz(){
     $("#quiz_start").click(function(){
@@ -388,6 +594,9 @@ function quizFinish(){
         $("#home_screen").show();
     })
 }
+
+//----------------------------------계산기---------------------------------------------------------
+
 var clickedNum;
 var displayedNum = " ";
 var parentheses = 1;
@@ -495,7 +704,12 @@ function toCalc(){
     $("#calculator_screen").show();
 }
 
-
+function toWeather(){
+    $("#menuList").hide();
+    $(".main_screen_list").hide();
+    $("#weather_screen_background").show();
+    $("#weather_screen").show();
+}
 
 
 
