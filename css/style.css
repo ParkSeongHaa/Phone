@@ -328,6 +328,7 @@ body{
 #cityName{
     height:55px;
     font-size: 35px;
+    cursor:pointer;
 }
 #temperature{
     height:60px;
