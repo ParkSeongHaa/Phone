@@ -79,7 +79,6 @@ var cityMap = {
     "제주도": "Jeju-do"
   };
 $("#cityName").click(function(){            //도시 리스트 활성화
-    // $("#cityList").css('display','block');
     $("#cityList").slideToggle();
 })
 let clickedCity = 'Daegu'
@@ -89,8 +88,8 @@ $(".koreaCitys").click(function(){          //도시 변경
     clickedCity = cityMap[$(this).text()];
     $("#cityName").text($(this).text());
     $("#cityList").css('display','none');
-    $("#temp_per_hour").innerHTML = "";
-    $("#weekTempBox").innerHTML = "";
+    $("#temp_per_hour").text("")
+    $("#weekTempBox").text("")
     getweather();
 })
 
